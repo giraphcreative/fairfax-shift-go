@@ -1,0 +1,106 @@
+
+body {
+	@include font;
+	font-size: 85%;
+	line-height: 1.5em;
+	color: #333;
+	
+	@include respond-to( 1024px ) {
+		font-size: 100%;
+	}
+}
+
+a {
+	color: darken( $green, 10% );
+	text-decoration: none;
+	border-bottom: 1px dotted $green;
+
+	&:hover {
+		color: $green;
+	}
+
+	&.no-dots {
+		border-bottom: 0;
+	}
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 10px 0;
+	color: $blue;
+
+	span {
+		color: #999;
+	}
+}
+
+h2 {
+	font-size: 3em;
+	line-height: 1.1em;
+	font-weight: 400;
+	font-style: italic;
+	color: $orange;
+}
+
+h3 {
+	font-size: 2em;
+	line-height: 1.2em;
+	font-weight: 700;
+	font-style: italic;
+
+	&.caps {
+		text-transform: uppercase;
+		padding-top: 50px;
+	}
+}
+
+h4 {
+	font-size: 2em;
+	line-height: 1.3em;
+	color: $blue;
+}
+
+ul {
+	list-style-type: none;
+
+	li {
+		font-size: 1.3em;
+		padding-bottom: 6px;
+	    padding-left: 1em; 
+	    text-indent: -0.9em;
+
+		&:before {
+			content: "\25CF  ";
+			font-size: 20px;
+			font-family: Arial, sans-serif;
+			color: #888;
+		}
+	}
+
+	&.orange li:before {
+		color: $orange;
+	}
+
+	&.green li:before {
+		color: $green;
+	}
+	
+	&.blue li:before {
+		color: $blue;
+	}
+
+	&.large {
+		padding-top: 20px;
+
+		li {
+				font-size: 1.6em;
+				line-height: 1.2em;
+				color: $blue;
+		}
+	} 
+
+
+	@include respond-to( 768px ) {
+		padding: 10px 30px;
+	}
+}
