@@ -41,28 +41,7 @@ $orange: #f7941e;
 		padding: 30px;
 		font-size: 15px;
 		line-height: 22px;
-
-		img.coupon {
-			margin-top: 20px;
-		}
 	}
-
-	@include respond-to( 500px ) {
-
-		blockquote {
-			padding: 30px 250px 40px 40px;
-			position: relative;
-
-			img.coupon {
-				position: absolute;
-				bottom: 50%;
-				margin: 0 0 -65px;
-				right: 2%;
-				max-width: 200px;
-				z-index: 1;
-			}
-		}
-	} 
 
 	@include respond-to( 768px ) {
 		background-image: url(../img/bg-head-large.jpg) center center;
@@ -94,10 +73,8 @@ $orange: #f7941e;
 
 		blockquote {
 			position: absolute;
-			padding: 30px 250px 40px 40px;
 			bottom: 0;
 			text-align: left;
-
 		}
 
 	}
@@ -124,23 +101,6 @@ $orange: #f7941e;
 		blockquote {
 			top: auto;
 			bottom: 0;
-			padding: 30px 340px 40px 40px;
-
-			img.coupon {
-				margin-bottom: 0;
-				bottom: 10%;
-				max-width: 300px;
-			}
-		}
-	}
-
-	@include respond-to( 1440px ) {
-		blockquote {
-			padding: 30px 420px 40px 40px;
-
-			img.coupon {
-				max-width: 375px;
-			}
 		}
 	}
 
